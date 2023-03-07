@@ -33,9 +33,20 @@ router.post('/start', async (req, res) => {
     } catch (error) {
         res.statusCode(400).json({ message: error.message })
     }
-
-
 })
+
+    router.delete('/productid/:id', async (req, res) => {
+        const user = await usersDao.findById(req.params.id)
+        if(!user) {
+            res.statusCode(404).json({ message: 'User not found'})
+            return
+        }
+
+        await usersDao.delete(req.params.id)
+        res.json( {message: 'User deleted'})
+    })
+
+export default router
 
 
 

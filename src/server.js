@@ -7,6 +7,7 @@ import { __dirname } from './utils.js';
 import productsRoutes from './routes/products.routes.js'
 import cartsRoutes from './routes/carts.routes.js'
 import viewsRoutes from './routes/views.routes.js'
+import usersRoutes from './routes/users.routes.js'
 import sessionRoutes from './routes/session.routes.js'
 import mongoose from 'mongoose';
 import Handlebars from 'handlebars';
