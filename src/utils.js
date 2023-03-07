@@ -8,7 +8,6 @@ export const hashPassword = (password) => bcrypt.hashSync(password, bcrypt.genSa
 //Compare Password
 export const comparePassword = (user, password) => bcrypt.compareSync(password, user.password)
 
+//Path
 const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
-export default __dirname
+export const __dirname = path.dirname(__filename)
